@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { FareCalculator } from '@/components/FareCalculator'
 import { RulePicker } from '@/components/RulePicker'
 import { defaultRule, findRule, type FareRule } from '@/fares'
+import { Analytics } from "@vercel/analytics/next"
 
 const STORAGE_KEY = 'fair-fare:rule'
 
@@ -47,6 +48,7 @@ export default function App() {
 
       {/* Keyed so trip state resets when the city or vehicle changes. */}
       <FareCalculator key={rule.id} rule={rule} />
+      <Analytics />
     </main>
   )
 }
