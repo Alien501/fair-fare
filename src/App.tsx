@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FareCalculator } from '@/components/FareCalculator'
 import { RulePicker } from '@/components/RulePicker'
 import { defaultRule, findRule, type FareRule } from '@/fares'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const STORAGE_KEY = 'fair-fare:rule'
 
